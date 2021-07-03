@@ -16,11 +16,13 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        var login: String = etLogin.text.toString()
-        var password: String = etPassword.text.toString()
+
 
         btEnter.setOnClickListener {
-            if (login.equals(loginValid)) {
+            var login: String = etLogin.text.toString()
+            var password: String = etPassword.text.toString()
+
+            if (login.equals(loginValid) && password.equals(passwordValid)){
                 var intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
             } else {
