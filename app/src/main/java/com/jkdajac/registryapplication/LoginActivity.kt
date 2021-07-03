@@ -9,28 +9,29 @@ import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
 
-    val loginValid = "Ivan"
-    val passwordValid = "1"
+    val loginValid : String = "Ivan"
+    val passwordValid : String = "1"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        enter()
 
-    }
-
-    fun enter() {
         var login: String = etLogin.text.toString()
         var password: String = etPassword.text.toString()
 
         btEnter.setOnClickListener {
-            if (login == loginValid && password == passwordValid) {
+            if (login.equals(loginValid)) {
                 var intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
             } else {
                 tvInfoRegistry.text = " Invalid login or password "
             }
         }
+
     }
-}
+
+
+        }
+
+
 
