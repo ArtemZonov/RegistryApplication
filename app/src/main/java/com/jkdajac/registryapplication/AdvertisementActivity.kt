@@ -10,7 +10,7 @@ class AdvertisementActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_advertisement)
         ivBack.setOnClickListener {
-            var intent = Intent(this, AdvertisementActivity::class.java)
+            var intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
     }
